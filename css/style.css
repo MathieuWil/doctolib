@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .25s;
+    background-color: #fff;
+}
+
+.logo {
+    height: 110px;
+    width: 170px;
+    cursor: pointer;
+    background-color: none;
+    transition: all .25s;
+}
+
+.logo-asset {
+    position: relative;
+    top: 15px;
+    transition: all .15s;
+    transition-timing-function: ease-in-out;
+}
+
+.logo-asset:hover {
+    top: 5px;
+}
+
+.social,
+.navigation {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    transition: all .25s;
+}
+
+.social::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    height: 1px;
+    background-color: #DBDBDB;
+    width: calc(50% - 120px);
+    transition: all .25s;
+} 
+
+.navigation::after {
+    content: '';
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    height: 1px;
+    background-color: #DBDBDB;
+    width: calc(50% - 120px);
+    transition: all .25s;
+} 
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-list,
+.nav-list {
+    margin-bottom: 45px;
+    padding: 0 40px 0 40px;
+    transition: all .25s;
+}
+
+.social-list li,
+.nav-list li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 20px 0 20px;
+    text-transform: uppercase;
+}
+
+.nav-list li a {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+}
+
+.nav-list li a {
+    display: inline-block;
+    color: #444;
+    text-decoration: none;
+}
+
+.nav-list li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #444;
+    transition: all .25s;
+    margin: 0 auto;
+}
+
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+.social-list li a i {
+    font-size: 25px;
+    color: #444;
+}
+
+/* Header Scroll */
+
+.header.shrink {
+    height: 80px;
+}
+
+.header.shrink > .logo {
+    height: 70px;
+    width: 70px;
+}
+
+.header.shrink > .social,
+.header.shrink > .navigation {
+    padding-top: 5px;
+}
+
+.header.shrink > .social::after {
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+} 
+
+.header.shrink > .navigation::after {
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+} 
+
+.header.shrink .social-list,
+.header.shrink .nav-list {
+    margin-bottom: 0px;
+}
